@@ -20,7 +20,7 @@ function sortTable(colNum, type) {
   switch (type) {
     case 'number':
       compare = function (rowA, rowB) {
-        return rowA.cells[colNum].textContent - rowB.cells[colNum].textContent;
+        return Number(rowA.cells[colNum].textContent) - Number(rowB.cells[colNum].textContent);
       };
       break;
     case 'string':
